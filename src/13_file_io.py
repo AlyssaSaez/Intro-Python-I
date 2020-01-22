@@ -9,19 +9,21 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
-with open('foo.txt') as f:
-    content = f.read()
-    print(content)
+with open("/home/alyssa/Computer-Science/Intro-Python-I/src/foo.txt") as f:
+    for line in f:
+        print(line)
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
-# then close the file. Open up "bar.txt" and inspect it to make 
+# then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
 
-with open('bar.txt', 'w+') as f2:
-    f2.write("Line One \nLine Two \nLine Three")
+f = open("bar.txt", "w")
+f.write("""Line 1
+            Line 2
+            Line 3""")
 
 
-#stuck here, getting "no such file or directory: 'foo.txt'", so I've just written in theory what I think should be done lol
+# stuck here, getting "no such file or directory: 'foo.txt'", so I've just written in theory what I think should be done lol
